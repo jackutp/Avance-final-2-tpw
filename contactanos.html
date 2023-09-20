@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contactanos</title>
+    </head>
+    <body style="background-color: rgb(203, 181, 223);">
+        <style>
+            ul.nav-menu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color:  rgb(188, 129, 243);
+                overflow: hidden;
+            }
+            ul.nav-menu li {
+                float: right;
+            }
+            ul.nav-menu li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            ul.nav-menu li a:hover {
+                background-color: rgb(134, 106, 160);
+            }
+        </style>
+    </body>
+
+    <h1>Cont&aacute;ctenos:</h1>
+    <form id="mienvio">
+        <fieldset>
+            <legend>Datos del mensaje</legend>
+            <p></p>
+            <label>Nombre: </label>
+            <input type="text" name="nombre"><br>
+            <p></p>
+            <label>Apellidos: </label>
+            <input type="text" name="direccion"><br>
+            <p></p>
+            <label>N&uacute;mero de DNI: </label>
+            <input type="text" name="direccion"><br>
+            <p></p>
+            <label>Correo Electr&oacute;nico: </label>
+            <input type="text" name="direccion"><br>
+            <p></p>
+            <label>N&uacute;mero de celular: </label>
+            <input type="text" name="direccion"><br>
+            <p></p>
+            <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            <p></p>
+            <label for="tipoMensaje">Tipo de Mensaje:</label>
+                <select id="tipoMensaje" name="tipoMensaje" required>
+                    <option value="consulta">Consulta</option>
+                    <option value="solicitud">Solicitud</option>
+                    <option value="reclamo">Reclamo</option>
+                </select>
+            <p></p>
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+            <p></p>
+            <label for="mensaje">Mensaje a enviar:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <p></p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+            <p></p>
+            <script>
+                document.getElementById("mienvio").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                 alert("Mensaje enviado");
+                });
+            </script>
+        </fieldset>
+    </form>
+
+</html>
